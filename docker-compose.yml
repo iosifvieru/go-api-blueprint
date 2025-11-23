@@ -1,0 +1,11 @@
+
+services:
+  blueprint:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: basic-go
+    working_dir: /go/src/app
+    command: ["./main"]
+    ports:
+      - "8080:8080"
